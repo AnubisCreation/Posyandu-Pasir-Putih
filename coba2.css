@@ -1,0 +1,267 @@
+body {
+  background-image: url(image/anak.png);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#menu ul{
+  margin:0;
+}
+
+#menu ul li{
+  list-style-type:none;
+  margin: 0px;
+  float:left;
+}
+
+#menu ul li a{
+  font-family:Times New Roman;
+  text-decoration:none;
+  margin:0 0 0 0;
+  font-size:16px;
+  color: black;
+  text-align: center;
+}
+
+#menu ul li ul.muncul{
+  display:none;
+}
+
+#menu ul li:hover ul.muncul{
+  display:block;
+  position:absolute;
+  z-index:2;
+  text-align:center;
+}
+
+#menu ul li:hover ul.muncul li a{
+  display: block;
+  padding:0px 22px 0px 20px;
+  background:black;
+  margin:0 0px 0 0;
+  color: white;
+  transition: all;
+  transition-duration: 0.5s;
+  transition-delay: ease;
+  text-align: left;
+}
+
+#menu ul li:hover ul.muncul li a:hover {
+  color: red;
+  text-align: left;
+}
+
+#menu ul li:hover ul.muncul li{
+  display: block;
+  float:none;
+  margin:-36px 0 35px 56px;
+  transition: all;
+  transition-duration: 0.5s;
+  transition-delay: ease;
+}
+
+#menu ul li a:hover{
+  text-decoration:none;
+  color: white;
+  background-color: black;
+}
+
+.icon{
+  color: #21DFCD;
+  float: right;
+  width: 40px;
+  font-size: 1.3rem;
+  height: 40px;
+  border-radius: 50%;
+  background: #2F3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icon:hover{
+  transform: rotate(360deg) scale(0.8);
+  transition-duration: 0.8s;
+}
+
+input{
+  width: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  background: none;
+  font-size: 1.1rem;
+  transition: 1s ease;
+  line-height: 40px;
+  color: #fff;
+}
+
+.search-box{
+  position: absolute;
+  right: 0.6%;
+  top: 91px;
+  background: #2C3441;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search-box:hover > input{
+  width: 200px;
+  padding: 0 10px;
+}
+
+.search-box:hover > .icon{
+  background: #536179;
+  color: #21DFCD;
+}
+
+#a {
+  background-color: #ffffff82;
+  padding: 0px;
+}
+
+.cardA {
+  position: relative;
+  width: 45%;
+  height: 550px;
+  background: url(Untitled-1.PNG) center no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cardA::before, .cardA::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(70% + 35px);
+  background-color: #fff;
+  transition: transform .5s .25s ease-in;
+  z-index: -1;
+}
+
+.cardA::before {
+  top: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+  transform: translateY(-100%);
+}
+
+.cardA::after {
+  bottom: 0;
+  clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+  transform: translateY(100%);
+}
+
+.card_content {
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+.cardA:hover::before, .cardA:hover::after {
+  transform: translateY(0);
+}
+
+.cardA:hover .card_content {
+  opacity: 1;
+  transition-delay: .75s;
+}
+
+.cardB {
+  position: relative;
+  width: 45%;
+  height: 550px;
+  background: url(Untitled-2.PNG) center no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cardB::before, .cardB::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(70% + 35px);
+  background-color: #fff;
+  transition: transform .5s .25s ease-in;
+  z-index: -1;
+}
+
+.cardB::before {
+  top: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+  transform: translateY(-100%);
+}
+
+.cardB::after {
+  bottom: 0;
+  clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+  transform: translateY(100%);
+}
+
+.cardB:hover::before, .cardB:hover::after {
+  transform: translateY(0);
+}
+
+.cardB:hover .card_content {
+  opacity: 1;
+  transition-delay: .75s;
+}
+#cp {
+      width: auto;
+      margin: auto;
+      padding: 10px;
+      background-color: black;
+      font-family: arial;
+      color: white;
+    }
